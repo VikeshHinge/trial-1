@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Watch on a Mac(IN)</title>
+</head>
+<style>
+    *{
+        padding: 0%;
+        margin: 0%;
+    }
+    .nav{
+        display:flex;;
+        height: 50px;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        background-color: rgb(20, 20, 20);
+    }
+    .nav>p{
+        margin:10px;
+        color:gray;
+    }
+    .display{
+        width:70%;
+        margin-left: 10%;
+ 
+    }
+    .display>div:first-child{
+        display: flex;
+       
+    }
+    .display>div>p:nth-child(2){
+       margin: 20px 0px 20px 60%;
+       font-size: 15px;
+    }
+    .display>div>p:nth-child(3){
+       margin: 20px 0px 20px 20px;
+       font-size: 15px;
+    }
+    .display>div>p:first-child {
+        font-size: 30px;
+        font-weight: bold;
+        margin-top: 10px;
+    }
+   .display>hr+p{
+    color: #0070c9;
+    font-size: 20px;
+    margin: 30px 0px 10px 150px;
+   }
+  .display>p+p{
+    font-size: 30px;
+    font-weight: bold;
+    margin: 0px 0px 20px 150px ;
+   }
+   .display>img{
+    width: 573px;
+    height: 341px;
+    margin: 0px 130px;
+   }
+  .Hr{
+    margin-left: 150px;
+   }
+   hr+div{
+    display: flex;
+    width: 80%;
+    height: 50px;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px 0px 20px 150px;
+   }
+  div> h1{
+    color: #333333;
+    margin: 20px 0px 20px 150px;
+   }
+   a{
+    font-size: 12px;
+    margin: 5px 0px 20px 150px;
+    
+   }
+   .para1{
+    font-size: 18px;
+    margin-top: 20px;
+    color: #333333;
+    font-weight: bold;
+    margin-left: 150px;
+   }
+   #para2{
+    font-size: 18px;
+    color: #333333;
+    margin-top: 20px;
+   }
+  .moreinfo>#myp{
+    font-size: 18px;
+    color: #333333;
+   }
+   #myp+a{
+    font-size: 16px;
+    margin-left: 5px;
+    margin-top: 12px;
+    color: #0070c9;
+   }
+   .moreinfo{
+     display: flex;
+     margin-left: 150px;
+   }
+   .moreinfo+p{
+    margin: 30px 0px 50px 150px;
+    font-size: 12px;
+    color: #333333;
+   }
+   .helpful{
+    display: flex;
+    width:300px;
+    margin:20px 130px;
+   }
+   .helpful>div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width:250px;
+    height: 30px;
+     font-size: 14px;
+     font-weight: bold;
+    color: #0070c9;
+    border: 1px solid #0070c9;
+    margin: 0px 10px;
+    border-radius: 5px;
+   }
+   .footer{
+    display: grid;
+    grid-template-columns: 100%;
+    width: 100%;
+    margin-left: 0px;
+    margin-top: 0px;
+    background-color:#ececec;
+   }
+   .footer>hr{
+    margin: 10px 120px ;
+   }
+   .footer>div:first-child{
+    display: flex;
+    margin: 20px 0px 20px 130px;
+    justify-content:flex-start ;
+   }
+   .footer>div:first-child>a{
+   margin: 0px 15px;
+   font-size: 14px;
+   }
+   .footer>div:last-child{
+    display: flex;
+    margin-top: 0px;
+   }
+   .footer>div:last-child>a{
+    font-size: 12px;
+    width: 300px;
+    margin: 5px;
+   }
+   .footer>div:last-child>p{
+     width: 900px;
+    font-size: 10px;
+    color: #333333;
+   }
+   .footer>div:last-child>a:last-child{
+    margin-left: 350px;
+    color: #333333;
+   }
+   .scroll{
+    display: flex;
+    margin-bottom:35px;
+   }
+   .previous>p:nth-child(1){
+    position: absolute;
+    font-size: 40px;
+    font-weight: bold;
+    color:#0070c9 ;
+    margin-left: -25px;
+    margin-top: -10px;
+   }
+   .previous>p:nth-child(2){
+    margin-left: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    color:gray;
+   }
+   .previous>p:nth-child(3){
+    margin-left: 10px;
+    margin-top: 5px;
+    font-size: 18px;
+    font-weight: bold;
+    color:#0070c9 ;
+   }
+   .next{
+    margin-right: 100px;
+   }
+   .next>p:nth-child(2){
+    font-size: 40px;
+    position: absolute;
+    margin-top: -30px;
+    margin-left:195px;
+    font-weight: bold;
+    color:#0070c9 ;
+   }
+   .next>p:nth-child(1){
+    margin-left: 149px;
+    font-size: 18px;
+    font-weight: bold;
+    color:gray;
+    margin-top: 5px;
+   margin-right: 0px;
+   }
+   .next>p:nth-child(3){
+    position: relative;
+    font-size: 18px;
+    color:#0070c9 ;
+    font-weight: bold;
+   
+   }
+
+</style>
+<body>
+    <div class="nav">
+        <div>
+            <img src="" alt="">
+        </div>
+        <p>Store</p>
+        <p>Mac</p>
+        <p>ipad</p>
+        <p>iphone</p>
+        <p>Watch</p>
+        <p>Airpods</p>
+        <p>Tv & Home</p>
+        <p>Only on Apple</p>
+        <p>Accessories</p>
+        <p>Support</p>
+        <div></div>
+        <div></div>
+    </div>
+<div class="display">
+    <div>
+        <p>APPLE TV+</p>
+        <p>communities</p>
+        <p>contact support</p>
+    </div>
+    <hr>
+    <p>
+        Table of Contents
+    </p>
+    <p>WATCH ON A MAC</p>
+    <img src="https://help.apple.com/assets/62268654B03EEF085E38F027/62268654B03EEF085E38F02E/en_US/369359e6da8a38ed145dcecf8089d46c.png" alt="">
+     <br>
+    <a> Stream Foundation on the Apple TV app</a>
+    <p class="para1">The Apple TV app is the first place you go to start watching Apple TV+ and more on your Mac. All your TV shows, movies, and more are all in one place.
+    </p>
+     <p id="para2"> The Apple TV app requires macOS Catalina 10.15, macOS Big Sur 11.0, macOS Monterey 12.0, or later.</p>
+        <hr class="Hr">
+        <div><h2>Mac with macOS Monterey or later</h2>
+        <h1>+</h1>
+        </div>
+        <hr class="Hr">
+        <div><h2>Mac with macOs Catalina or macOS Big Sur</h2>
+        <h1>+</h1>
+        </div>
+        <hr class="Hr">
+        <div><h2>Mac with macOS Mojave or earlier</h2>
+        <h1>+</h1>
+         </div>
+         <hr class="Hr">
+         <br>
+        <div class="moreinfo">
+            <p id="myp">For more information, see the</p>
+              <a>Apple TV App User Guide for Mac.</a>
+        </div>
+         <p>Apple TV+ requires a subscription. Not all features and content are available in all countries or regions, or on all streaming devices.</p>
+
+</div>
+     <hr>
+       <div class="helpful">
+        <p>Helpful?</p>
+         <div>Yes</div>
+           <div>No</div>
+       </div>
+        <hr>
+        <div class="scroll">
+          <div class="previous">
+            <p><</p>
+            <p>Previous</p>
+            <p>iPhone,iPad and ipod touch</p>
+          </div>
+          <div class="next">
+            <p>Next</p>
+            <p>></p>
+            <p>Watch in a web browser</p>
+          </div>
+        </div>
+        <div class="footer">
+            <div>
+                <a >Support</a>
+                <a >Apple TV+</a>
+                <p> Watch on a Mac</p>
+            </div>
+            <hr>
+            <div>
+                <p>Copyright © 2022 Apple Inc. All rights reserved.</p>
+                <a >Privacy Policy</a>|
+                <a >Terms of Use</a>|
+                <a >Sales Policy</a>|
+                <a >Site Map</a>|
+                <a>India</a>
+            </div>
+        </div>
+</body>
+</html>
+<script>
+
+</script>
